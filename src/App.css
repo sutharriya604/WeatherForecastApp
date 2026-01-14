@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* BODY */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    color: #474747;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+/* BLURRED BACKGROUND IMAGE */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('./assets/back.jpg') no-repeat center center / cover;
+    filter: blur(2px);
+    transform: scale(1.1); /* prevents edges from showing */
+    z-index: -1;
+}
+
+/* APP CONTAINER */
+.app {
+    width: 1200px;
+    padding: 0;
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+/* HEADINGS */
+h1 {
+    margin-bottom: 20px;
+}
+
+/* DAYS BUTTONS */
+.days {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.days button {
+    border: none;
+    padding: 8px 12px;
+    border-radius: 10px;
+    background-color: transparent;
+    color: black;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100px;
+    height: 150px;
+    font-size: 20px;
+    background: #d1d1d1c7;
+}
+
+.days button:hover,
+.days .active {
+    background: #dbdbdb;
+    color: #1245a3;
+    scale: 105%;
+}
+
+/* WEATHER CARD */
+.weather-card {
+    padding: 20px;
+    border-radius: 18px;
+    height: 250px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* WEATHER ICON */
+.weather-icon {
+    font-size: 150px;
+    margin-bottom: 10px;
+    height: 200px;
+    width: 200px;
+}
+
+/* WEATHER TEXT */
+.weather-card h2 {
+    font-size: 40px;
+}
+
+.weather-card p {
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+
+/* WEATHER DETAILS */
+.details {
+    display: flex;
+    height: 150px;
+    width: 400px;
+    flex-wrap: wrap;
+}
+
+/* DETAIL BOX */
+.box {
+    width: 160px;
+    height: 90px;
+    background: #ffffff85;
+    border-radius: 15px;
+    padding: 15px 5px;
+    transition: 0.3s;
+    margin: 20px;
+}
+
+.box h3 {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.box p {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* WEATHER DISPLAY */
+.weather {
+    display: flex;
+    align-items: center;
+}
+
+.deg {
+    display: inline;
+    text-align: start;
+    font-size: 40px;
+}
+
+.desc {
+    text-align: start;
+    color: rgb(39, 39, 39);
+}
