@@ -29,16 +29,30 @@ npm run build
 Scripts are defined in package.json.
 
 🔧 Project Structure (key files)
-src/pages/Home.jsx — main page and layout
-
-src/Components/Search.jsx — search input and API calls
-
-src/Components/Day.jsx — individual day card
-
-src/App.css — main styles
-
-index.html / src/main.jsx — app bootstrap
-
+```
+WeatherForecastApp/
+├─── public/
+│   └─── vite.svg
+├─── src/
+│   ├─── assets/
+│   │   ├─── back.jpg
+│   │   └─── react.svg
+│   ├─── Components/
+│   │   ├─── Day.jsx
+│   │   └─── Search.jsx
+│   ├─── pages/
+│   │   └─── Home.jsx
+│   ├─── App.css
+│   ├─── App.jsx
+│   ├─── index.css
+│   └─── main.jsx
+├─── eslint.config.js
+├─── index.html
+├─── package-lock.json
+├─── package.json
+├─── README.md
+└─── vite.config.js
+```
 🤝 Contributing
 Pull requests welcome. Keep changes small and focused. Add tests for new logic where applicable.
 
